@@ -12,7 +12,7 @@ In this guide, we will cover:
 - Introduction to accessing the Internet using Containers in Firefox browser to keep different profiles in different silos.
 - Using a free secure email service such as [ProtonMail](https://protonmail.com/).
 - Setting up a VPN, such as [NordVPN](https://nordvpn.com/).
-- Using Tor Browser to brows the internet anonymously.
+- Using Tor Browser to browse the internet anonymously.
 
 For those in a rush, you may not want to backup important data, wipe your MacBook and do a clean install, although I strongly recommend that. In that case, please start with the Firefox Containers section, and skip the following Reinstall MacOS section.
 
