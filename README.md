@@ -1,6 +1,8 @@
 # Handfoot Security Guide
 
-*Last Update: August 11, 2020*
+*Last Update: August 12, 2020*
+
+*If you would like to help improve this article, feel free to leave your suggestions in [Issues](https://github.com/handfoot/securitytips/issues/new) or email: handfoot at protonmail dot com*
 
 No computer is perfectly safe, especially if connected to the Internet. This guide is meant to give activists a few tips to increase the security of their desktop computer, using the example of a Mac OS device (although should apply to Windows). Cybersecurity and convenience is a tradeoff, and this guide will try to find a good balance to keep you moderately secure, but still able to use the everyday computing tools you need to conduct activism work. I assume your threat model is medium to intermediate.
 
