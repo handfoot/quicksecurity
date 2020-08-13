@@ -2,8 +2,6 @@
 
 *Last Update: August 12, 2020*
 
-*If you would like to help improve this article, feel free to leave your suggestions in [issues](https://github.com/handfoot/securitytips/issues/new), or email: handfoot at protonmail dot com*
-
 No computer is perfectly safe, especially if connected to the Internet. This guide is meant to give activists a few tips to increase the security of their desktop computer, using the example of a Mac OS device (although should apply to Windows). Cybersecurity and convenience is a tradeoff, and this guide will try to find a good balance to keep you moderately secure, but still able to use the everyday computing tools you need to conduct activism work. I assume your threat model is medium to intermediate.
 
 If you are actively targeted by the state, you will need to look at more secure options such as using [Tails](https://tails.boum.org/) Linux OS on a USB thumbstick to perform your activism work, and also invest in efforts to keep off the grid. I may write a future article about [Tails](https://tails.boum.org/).
@@ -94,3 +92,7 @@ If you want to get a VPN anonymously (although won't be 100% anonymous), you can
 [GitHub](https://github.com) is a good tool (with moderate security) for working on projects that may not require a high level of security (such as promotional materials and documents that will soon go public, but not document with sensitive information like activist identities). They give every user a free private account for creative private repositories that can only be accessed by the account holder and their collaborators. GitHub pages is also a good way to serve static webpages, or public documents, like this one. We can simply use markdown to create web pages with content we want to share with others.
 
 You can register for a GitHub account using an anonymous email such as your proton mail.
+
+---
+
+*If you would like to help improve this article, feel free to leave your suggestions in [issues](https://github.com/handfoot/securitytips/issues/new), or email: handfoot at protonmail dot com*
