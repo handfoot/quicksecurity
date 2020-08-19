@@ -1,12 +1,12 @@
 # Handfoot Security Guide
 
-*Last Update: August 12, 2020*
+*Last Update: August 2020*
 
 No computer is perfectly safe, especially if connected to the Internet. This guide is meant to give activists a few tips to increase the security of their desktop computer, using the example of a Mac OS device (although should apply to Windows). Cybersecurity and convenience is a tradeoff, and this guide will try to find a good balance to keep you moderately secure, but still able to use the everyday computing tools you need to conduct activism work. I assume your threat model is medium to intermediate.
 
-If you are actively targeted by the state, you will need to look at more secure options such as using [Tails](https://tails.boum.org/) Linux OS on a USB thumbstick to perform your activism work, and also invest in efforts to keep off the grid. I may write a future article about [Tails](https://tails.boum.org/).
+If you are actively targeted by the state, you will need to look at more secure options such as using [Tails](https://tails.boum.org/) Linux OS on a USB thumbstick to perform your activism work, and also invest in efforts to keep off the grid. I may write a future article about [Tails OS](https://tails.boum.org/).
 
-In this guide, we will cover:
+**Summary**&nbsp; In this guide, we recommend doing the following things, and will cover each of them:
 
 - Installing a fresh copy of MacOS with more secure options, such as network safeguards and drive encryption.
 - Introduction to accessing the Internet using Containers in Firefox browser to keep different profiles in different silos.
@@ -14,20 +14,69 @@ In this guide, we will cover:
 - Setting up a VPN, such as [NordVPN](https://nordvpn.com/).
 - Using Tor Browser to browse the internet anonymously.
 
-For those in a rush, you may not want to backup important data, wipe your MacBook and do a clean install, although I strongly recommend that. In that case, please start with the Firefox Containers section, and skip the following Reinstall MacOS section.
 
-## Reinstall a fresh secure copy of MacOS
+## Secure your MacOS
 
-Follow this excellent guide, [Hardening MacOS](https://blog.bejarano.io/hardening-macos/)
- and try to follow every step.
 
-**Notes about the guide:**
+We will go through a list of steps to secure your MacOS. This section is based on the guide called [Hardening MacOS](https://blog.bejarano.io/hardening-macos/).
 
-The guide doesn't go into the details in the **Install a fresh copy of macOS** section. When you boot into recovery mode, go into Disk Utility, and delete the existing disk partitions to create a fresh new clean one (See Apple's [instructions](https://support.apple.com/en-gb/guide/disk-utility/dskutl14079/mac)). I recommend choosing Encrypted, but *not* the case-sensitive file system format. Then, proceed to format the boot drive and install macOS into the new file system. If you have issues reinstalling from scratch, or your recovery partition is gone, there is another guide called [How to create a bootable macOS Catalina installer drive](https://www.macworld.com/article/3442597/how-to-create-a-bootable-macos-catalina-installer-drive.html).
+### Reinstall fresh copy of MacOS after formatting the hard disk.
 
-In the **First Boot** section of the guide, steps 22 and 23 (*outbound firewall* and *binary whitelisting*) can be considered optional, and only needed for intermediate level security.
+For those in a rush, you may not want to backup important data, wipe your MacBook and do a clean install, although I strongly recommend that. In that case, you can skip this section.
 
-In the **Second Boot** section of the guide, we will cover topics such as web browser, VPN, privacy-respecting email, and encrypted email later in this article.
+To format your hard disk and install a fresh copy of MacOS, hit command-R after reboot, and you can follow the menu to erase your current hard disk (the boot drive, or main hard disk), and reinstall MacOS on that empty drive. All data will be gone from the boot drive. Note that the recovery partition on your mac can be an older version of MacOS, in which case you can install it, and then upgrade to the most recent version after installation.
+
+(*Optional*)&nbsp; Before reinstalling MacOS, go to the Utilities > Firmware Password Utility and consider setting up a firmware password to protect your data should it be lost or stolen.
+
+
+### Post installation steps
+
+Follow each of these steps after you have reinstalled MacOS from scratch. If you are in a rush and didn't do that, at least follow the following steps:
+
+- Go to System Preferences > Software Update and consider enabling automatic updates (if you are not comfortable enabling this, consider at least turning on security updates by going into Advanced… and checking Install system data files and security updates)
+
+- Go to System Preferences > Security & Privacy > General and set Require password after sleep to immediately or 5 seconds
+
+- Go to System Preferences > Security & Privacy > Firewall and turn on the firewall
+
+- Go to System Preferences > Security & Privacy > Firewall > Firewall Options… and check Block all incoming connections
+
+- Go to System Preferences > Security & Privacy > Privacy > Location and uncheck Enable Location Services
+
+- Go to System Preferences > Security & Privacy > Privacy > Analytics and uncheck Share Mac Analytics
+
+- Go to System Preferences > Sharing and anonymize the computer’s name (**important**), this name can be see by those connected to the same network as yours
+
+- Go to System Preferences > Sharing and turn off every service (turn on only when using it and disable afterwards)
+
+- Go to System Preferences > Spotlight > Search Results and uncheck Spotlight Suggestions and Allow Spotlight Suggestions in Look up
+
+- Go to System Preferences > General and uncheck Allow Handoff between this Mac and your iCloud devices
+
+- Go to System Preferences > Bluetooth and turn off Bluetooth (turn on only when using it and disable afterwards)
+
+- Go to Finder > Preferences > Advanced and check Show all filename extensions
+
+- Block malicious domain names using the /etc/hosts file (use StevenBlack's [hosts](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts) file with nearly 30K entries)
+
+- Go to System Preferences > Security & Privacy > FileVault and turn on FileVault (note: may take some time)
+
+- Secure FileVault when on sleep: (do this inside of a terminal)
+
+```
+sudo sh -c 'pmset -a destroyfvkeyonstandby 1; pmset -a hibernatemode 25; pmset -a powernap 0; pmset -a standby 0; pmset -a standbydelay 0; pmset -a autopoweroff 0'
+```
+
+**Important**&nbsp; FireVault is a disk encryption feature that will encrypt the contents of your hard disk, making it difficult to extract the data (without being able to login with your password), if your computer is taken away.
+
+- Go to System Preferences > Security & Privacy > Privacy > Contacts/Calendars/Reminders/Photos and remove any apps that shouldn’t have access to any of those folders, if any
+
+- Go to System Preferences > Security & Privacy > Privacy > Camera/Microphone and remove any app you don’t want to have access to the camera or microphone, if any
+
+- Go to System Preferences > Security & Privacy > Privacy > Full Disk Access and remove any app you don’t want to have full-disk access, if any
+
+- Go to System Preferences > Security & Privacy > Privacy > Advertising, check Limit Ad Tracking and click Reset Advertising Identifier
+
 
 ## Firefox Containers
 
@@ -52,15 +101,19 @@ Note that there is a version of Firefox available on Android and iOS as well.
 
 While Firefox is useful for accessing the Internet sometimes with your real identity, or well-known persona (like public figure social media accounts), there are times when you want to use the Internet anonymously. For this purpose, install the [Tor Browser](https://www.torproject.org/) next. Based on a fork of the Firefox browser, it uses The Onion Router to keep your browsing activity as anonymous and untrackable as possible (your real IP address and hence location will be scrambled), although there are things we should take precaution if using Tor Browser.
 
-You can consider using the Tor Browser for anything you want to keep really private, such as conducting research or surveying public articles, or logging into sensitive web email / social media accounts for activism activities. **Important:** If you use the Tor browser to log into, say, your activist Twitter account, and also log into the same account using a normal non-Tor browser, the social media service may be able to identify and *unscramble* you based on their logged IP address information. You should therefore decide whether you will settle on using VPN + Container approach to manage your activist account, or always do it through Tor Browser.
+You can consider using the Tor Browser for anything you want to keep really private, such as conducting research or surveying public articles, or logging into sensitive web email / social media accounts for activism activities.
+
+**Important**&nbsp; If you use the Tor browser to log into, say, your activist Twitter account, and also log into the same account using a normal non-Tor browser, the social media service may be able to identify and *unscramble* you based on their logged IP address information. You should therefore decide whether you will settle on using VPN + Container approach to manage your activist account, or always do it through Tor Browser.
 
 Another risk of Tor Browser (admittedly much less of an issue these days) is that the authorities can detect who is using Tor (via analyzing the exit nodes that connect you to the Tor network), and mark these people as suspicious. In countries like the US when there is a huge number of daily Tor users (in the order of millions), it is less of a risk, but for countries like Hong Kong, where the usage can be in the thousands only, it is advisable to use Tor only after connecting to a VPN in another country.
+
+**Important**&nbsp; If you are using Tor in a country with [high usage](https://metrics.torproject.org/userstats-relay-country.html), the authorities may be able to detect and identify that you are using Tor even though they cannot see what you are browsing in the Tor network, and may put you on a list. Hong Kong has around 6,000 active Tor users (connected to Tor network via a HK IP Address), which isn't that much to track. For this reason, I recommend connecting to Tor only after you have connected to a US or Canada VPN server.
 
 The only change I recommend after installing Tor is in Privacy & Security section, change the setting from Standard to Safer. Other than that, I wouldn't touch any configurations, as we want to blend in with every other Tor user out there. Never install add-ons in the Tor browser, and don't use it to remember user names or passwords.
 
 Every time you quite the Tor browser, everything is wiped. But during a session if you want to create a new identify, you can easily do so by clicking on the little broom icon next to the address bar.
 
-A note of caution: while all data is routed through the Tor network when using the Tor Browser, data from Internet usage *outside* of the browser is *not* routed through the Tor network. So while you may achieve privacy via encryption, you may still lose anonymity. To deal with this issue, operating systems such as [Tails](https://tails.boum.org/) is designed to route 100% of the data through the Tor network, and designed to be stored on a standalone USB thumbstick, with advanced features like secure memory wipe, etc., ideally used by journalists and activists in high risk countries. More tips about things to be careful about when using Tor [here](https://fossbytes.com/tor-anonymity-things-not-using-tor/).
+A note of caution: while all data is routed through the Tor network when using the Tor Browser, data from Internet usage *outside* of the browser is *not* routed through the Tor network. So while you may achieve privacy via encryption, you may still lose anonymity. To deal with this issue, operating systems such as [Tails OS](https://tails.boum.org/) is designed to route 100% of the data through the Tor network, and designed to be stored on a standalone USB thumbstick, with advanced features like secure memory wipe, etc., ideally used by journalists and activists in high risk countries. More tips about things to be careful about when using Tor [here](https://fossbytes.com/tor-anonymity-things-not-using-tor/).
 
 Note that there is the official version of Tor Browser is available on Android, while the Onion Browser (endorced by the Tor project) is available on iOS.
 
@@ -71,7 +124,9 @@ I recommend setting up a free [ProtonMail](https://protonmail.com/) account, tha
 
 In addition to storing all of your emails in encrypted form deep inside a mountain in Switzerland, ProtonMail also makes it really easy and convenient to secure all email communications, even to non-ProtonMail users and to users without any knowledge of how public-private key encryption schemes (like PGP) work.
 
-For example, after you setup an account, try composing an email to another (private) account. The email composer has an “Encryption” icon you can click on, where you will be prompted to type in a password to secure this email. The recipient of your email can simply click on the message, and be prompted for the password to decrypt it. The password can be communicated via secure means, such as Signal, but make sure each email has a different password. **Important:** Never put sensitive information in the subject of the email as that can be intercepted and may not be subject to encryption.
+For example, after you setup an account, try composing an email to another (private) account. The email composer has an “Encryption” icon you can click on, where you will be prompted to type in a password to secure this email. The recipient of your email can simply click on the message, and be prompted for the password to decrypt it. The password can be communicated via secure means, such as Signal, but make sure each email has a different password. The recipient can also securely reply to your email if it is sent this way.
+
+**Important**&nbsp; Never put sensitive information in the subject of the email as that can be intercepted and may not be subject to encryption.
 
 While the most secure way to email is using local email clients with strong encryption keys, services like ProtonMail can be a really easy way to securely communicate information between journalists, activists, political figures, without having to invest much time and energy on setting up a local encryption email system yourself.
 
@@ -85,9 +140,11 @@ While getting a VPN service simply migrates the risk from your local ISP to the 
 
 NordVPN is a good overall provider (at the time of writing their service is less than EUR 4/month for 3-years which is a bargain), while ProtonVPN and other providers are more focused on security at the expense of other factors like Internet speed. Some activists may also want to look at where the VPN is based, as some are in 5-eyes countries.
 
+**Important**&nbsp; Unless you have good reasons to, don't connect to VPN servers in Hong Kong.
+
 If you want to get a VPN anonymously (although won't be 100% anonymous), you can sign up to NordVPN using your anonymous Proton Mail account, and pay with bitcoin. The discussion of crypto currencies and their management is outside the scope of this article, but I recommend activists to be familiar with the use of bitcoin wallets for keeping funds secure, especially if one is moving across countries, or perhaps one wants to find a way to receive or pay funds outside of the financial system controlled and monitored by an authoritarian government.
 
-## GitHub
+## GitHub (Optional)
 
 [GitHub](https://github.com) is a good tool (with moderate security) for working on projects that may not require a high level of security (such as promotional materials and documents that will soon go public, but not document with sensitive information like activist identities). They give every user a free private account for creative private repositories that can only be accessed by the account holder and their collaborators. GitHub pages is also a good way to serve static webpages, or public documents, like this one. We can simply use markdown to create web pages with content we want to share with others.
 
