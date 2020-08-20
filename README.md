@@ -88,11 +88,13 @@ So go right ahead and download the [Firefox](https://www.mozilla.org/en-US/firef
 
 **Notes about the guide:**
 
+For medium security but greater convenience, I recommend keeping keeping Browsing Privacy mode to Standard (not Custom as per the guide).
+
 The confusing point is that the *‘Facebook Container’* is a different add-on, and not the *Containers* feature I just referred to earlier (the naming a bit confusing naming). Facebook does so much snooping that an add-on was created to stop them. For example, when you log into Spotify, for whatever reason the Facebook login system is accessed even if you don't even have a Facebook account. The *Facebook Container* will try to block such Facebook tracking.
 
 The *Containers* feature, on the other hand, allows you to create siloed profiles. I suggest using different container tabs for different browsing purposes, and do take advantage of the color codes and icons to make each container be distinct. **Make a conscious effort** not to mix up different containers, otherwise you may sign onto your activist Twitter account on the container you normally use for your personal Facebook or Twitter, potentially exposing your personal data across services (but note that if you use the same IP address your identify would be exposed anyways to either your ISP or VPN provider, if you use one).
 
-As per the guide, I recommend installing the NoScript plug-in. This may be a bit of an annoyance, as some sites require pop-up windoes and JavaScript to work, but it is well worth it. They are also commonly used in services like online banking. You can easily temporarily or permanently enable JavaScript or cookies for a particular site. After a while, you kind of get used to this, and realize that it is a good thing to distrust by default.
+As per the guide, Installing the NoScript plug-in only for high security (it will change your browsing habits), although I recommend it if you are willing to change your habits. This may be a bit of an annoyance, as some sites require pop-up windoes and JavaScript to work, but it is well worth it. They are also commonly used in services like online banking. You will need to be used to (easily) temporarily or permanently enable JavaScript for a particular site. After a while, you kind of get used to this, and realize that it is a good thing to distrust by default.
 
 Note that there is a version of Firefox available on Android and iOS as well.
 
