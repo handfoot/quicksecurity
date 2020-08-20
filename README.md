@@ -88,7 +88,7 @@ So go right ahead and download the [Firefox](https://www.mozilla.org/en-US/firef
 
 **Notes about the guide:**
 
-For medium security but greater convenience, I recommend keeping keeping Browsing Privacy mode to Standard (not Custom as per the guide).
+For more convenience (at expense of security), I recommend keeping Browsing Privacy mode to Standard (not Custom as per the guide).
 
 The confusing point is that the *‘Facebook Container’* is a different add-on, and not the *Containers* feature I just referred to earlier (the naming a bit confusing naming). Facebook does so much snooping that an add-on was created to stop them. For example, when you log into Spotify, for whatever reason the Facebook login system is accessed even if you don't even have a Facebook account. The *Facebook Container* will try to block such Facebook tracking.
 
