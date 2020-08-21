@@ -165,7 +165,7 @@ A note of caution: while all data is routed through the Tor network when using t
 Note that there is the official version of Tor Browser is available on Android, while the Onion Browser (endorced by the Tor project) is available on iOS.
 
 
-## Proton Mail account
+## ProtonMail account
 
 I recommend setting up a free [ProtonMail](https://protonmail.com/) account, that, as of writing, comes with 500MB of free storage. Personally I use an upgraded plan and pay for the service, but that's up to you. You will need to give them a mobile number for them to send you a verification code to get an account. They claim that the mobile number is not stored, but a secure hash of it is stored to prevent multiple people from creating accounts using one phone number. For a moderate threat model, that should be fine. If you want to be anonymous, you can give them a number from a burner phone / SIM card. Getting a burner phone + SIM card using cash, anonymously is standard procedure (but also quite detailed and must be done carefully) that is outside the scope of this article.
 
