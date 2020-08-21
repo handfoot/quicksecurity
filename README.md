@@ -84,19 +84,64 @@ Unfortunately for us, the reality of using the modern Internet is that every ser
 
 For instance, you may have a personal Twitter account, a Twitter account used for activism, a Facebook account, Spotify account, a personal Amazon account, and Internet banking accounts. Why would you want to use a single profile for all of these different use cases, when we wouldn't know what information can be easily cross-shared between them? By using different container tabs, we can silo our Internet usage into different distinct profiles.
 
-So go right ahead and download the [Firefox](https://www.mozilla.org/en-US/firefox/new/) browser for your desktop, and set that as your default browser. Follow the steps described in this [guide](https://www.lifewire.com/firefox-security-tips-and-tools-2487972) to secure your Firefox browser.
+So go right ahead and download the [Firefox](https://www.mozilla.org/en-US/firefox/new/) browser for your desktop, and set that as your default browser. I'm basing the settings on this [guide](https://www.lifewire.com/firefox-security-tips-and-tools-2487972) to secure your Firefox browser, but will suggest things slightly different.
 
-**Notes about the guide:**
+### Privacy and Security Settings
 
-For more convenience (at expense of security), I recommend keeping Browsing Privacy mode to Standard (not Custom as per the guide).
+The first thing you should do is click on “≡” button on the top right corner of your browser, and then select *Preferences*. Afterwards, select *Privacy & Security*.
+
+- Go to “Firefox Data Collection and Use” and make sure *Allow Firefox to send technical and interaction data to Mozilla*, *Allow Firefox to install and run studies*, and *Allow Firefox to send backlogged crash reports on your behalf* are not selected.
+
+- In “Send web sites a “Do Not Track” signal that you don’t want to be tracked” select *Always*.
+
+*Optional:* Select *Strict* for “Enhanced Tracking Protection”
+
+### Install Add-ons
+
+Click on ≡ again and then select Add-ons. Install the following add-ons (enable also in Private Windows when promted):
+
+- DuckDuckGo Privacy Essentials
+
+- DuckDuckGo
+
+- HTTPS Everywhere
+
+- Privacy Badger
+
+- uBlock Origin
+
+- Cookie AutoDelete
+
+- Decentraleyes
+
+- Facebook Container
+
+- Firefox Multi-Account Containers
+
+*Optional:* As per the  [guide](https://www.lifewire.com/firefox-security-tips-and-tools-2487972), installing the NoScript plug-in only for high security (it will change your browsing habits), although I recommend it if you are willing to change your habits. This may be a bit of an annoyance, as some sites require pop-up windoes and JavaScript to work, but it is well worth it. They are also commonly used in services like online banking. You will need to be used to (easily) temporarily or permanently enable JavaScript for a particular site. After a while, you kind of get used to this, and realize that it is a good thing to distrust by default.
+
+
+### Change Search Engine to DuckDuckGo
+
+To avoid getting constantly tracked by Google, I recommend using DuckDuckGo for your search engine. You can always use Google / Gmail if you want on case-by-case basis. The first thing you should do is click on “≡” button on the top right corner of your browser, and then select *Preferences* then *Search*. Make sure DuckDuckGo is the default search engine. It should be the case already after “DuckDuckGo Privacy Essentials” add-on has been installed.
+
+### Use Containers
+
+The *Containers* feature allows you to create siloed profiles for Internet browsing. I suggest using different container tabs for different browsing purposes, and do take advantage of the color codes and icons to make each container be distinct. **Make a conscious effort** not to mix up different containers, otherwise you may sign onto your activist Twitter account on the container you normally use for your personal Facebook or Twitter, potentially exposing your personal data across services (but note that if you use the same IP address your identify would be exposed anyways to either your ISP or VPN provider, if you use one).
+
+Go to File, New Container Tab, and Manage Containers. I would delete all the existing settings, and start creating different containers for different use cases. I would have a few of them to silo my Internet browsing, such as:
+
+- One for each social media account, and keeping activist accounts in different containers to personal accounts.
+
+- Google-related services (YouTube, Gmail, Google Docs, etc). You may want to set up one for personal Google services, and one for activism related work, if you have another set of Google accounts for activism.
+
+- Different containers for Protonmail, online banking, Bitcoin-related.
+
+- Services like Amazon, Dropbox, Spotify do a lot of tracking, so make sure they are in different Containers. Spotify also tries to access your Facebook login that the Facebook container will prevent.
+
+If you use NoScript add-on, your settings can also be different in each container. For instance, in my case, my Google container will allow Javascript code from Google sites to run, but other containers will disable Javascript from Google sites, to keep Google from tracking activities of other business.
 
 The confusing point is that the *‘Facebook Container’* is a different add-on, and not the *Containers* feature I just referred to earlier (the naming a bit confusing naming). Facebook does so much snooping that an add-on was created to stop them. For example, when you log into Spotify, for whatever reason the Facebook login system is accessed even if you don't even have a Facebook account. The *Facebook Container* will try to block such Facebook tracking.
-
-The *Containers* feature, on the other hand, allows you to create siloed profiles. I suggest using different container tabs for different browsing purposes, and do take advantage of the color codes and icons to make each container be distinct. **Make a conscious effort** not to mix up different containers, otherwise you may sign onto your activist Twitter account on the container you normally use for your personal Facebook or Twitter, potentially exposing your personal data across services (but note that if you use the same IP address your identify would be exposed anyways to either your ISP or VPN provider, if you use one).
-
-As per the guide, Installing the NoScript plug-in only for high security (it will change your browsing habits), although I recommend it if you are willing to change your habits. This may be a bit of an annoyance, as some sites require pop-up windoes and JavaScript to work, but it is well worth it. They are also commonly used in services like online banking. You will need to be used to (easily) temporarily or permanently enable JavaScript for a particular site. After a while, you kind of get used to this, and realize that it is a good thing to distrust by default.
-
-Note that there is a version of Firefox available on Android and iOS as well.
 
 
 ## Tor Browser
