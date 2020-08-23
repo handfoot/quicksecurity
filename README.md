@@ -118,7 +118,7 @@ Click on ≡ again and then select Add-ons. Install the following add-ons (enabl
 
 - Firefox Multi-Account Containers
 
-*Optional:* As per the  [guide](https://www.lifewire.com/firefox-security-tips-and-tools-2487972), installing the NoScript plug-in only for high security (it will change your browsing habits), although I recommend it if you are willing to change your habits. This may be a bit of an annoyance, as some sites require pop-up windoes and JavaScript to work, but it is well worth it. They are also commonly used in services like online banking. You will need to be used to (easily) temporarily or permanently enable JavaScript for a particular site. After a while, you kind of get used to this, and realize that it is a good thing to distrust by default.
+*Optional:* As per the  [guide](https://www.lifewire.com/firefox-security-tips-and-tools-2487972), installing the NoScript plug-in only for high security (it will change your browsing habits), although I recommend it if you are willing to change your habits. This may be a bit of an annoyance, as some sites require pop-up windows and JavaScript to work, but it is well worth it. They are also commonly used in services like online banking. You will need to be used to (easily) temporarily or permanently enable JavaScript for a particular site. After a while, you kind of get used to this, and realize that it is a good thing to distrust by default.
 
 
 ### Change Search Engine to DuckDuckGo
