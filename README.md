@@ -12,7 +12,7 @@ If you are actively targeted by the state, you will need to look at more secure 
 - Introduction to accessing the Internet using Containers in Firefox browser to keep different profiles in different silos.
 - Using a free secure email service such as [ProtonMail](https://protonmail.com/).
 - Setting up a VPN, such as [NordVPN](https://nordvpn.com/).
-- Using Tor Browser to browse the internet anonymously.
+- Using Tor Browser to browse the Internet anonymously.
 
 
 ## Secure your MacOS
