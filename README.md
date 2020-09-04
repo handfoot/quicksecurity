@@ -158,7 +158,7 @@ Another risk of Tor Browser (admittedly much less of an issue these days) is tha
 
 The only change I recommend after installing Tor is in Privacy & Security section, change the setting from Standard to Safer. Other than that, I wouldn't touch any configurations, as we want to blend in with every other Tor user out there. Never install add-ons in the Tor browser, and don't use it to remember user names or passwords.
 
-Every time you quite the Tor browser, everything is wiped. But during a session if you want to create a new identify, you can easily do so by clicking on the little broom icon next to the address bar.
+Every time you quit the Tor browser, everything is wiped. But during a session if you want to create a new identify, you can easily do so by clicking on the little broom icon next to the address bar.
 
 A note of caution: while all data is routed through the Tor network when using the Tor Browser, data from Internet usage *outside* of the browser is *not* routed through the Tor network. So while you may achieve privacy via encryption, you may still lose anonymity. To deal with this issue, operating systems such as [Tails OS](https://tails.boum.org/) is designed to route 100% of the data through the Tor network, and designed to be stored on a standalone USB thumbstick, with advanced features like secure memory wipe, etc., ideally used by journalists and activists in high risk countries. More tips about things to be careful about when using Tor [here](https://fossbytes.com/tor-anonymity-things-not-using-tor/).
 
