@@ -11,7 +11,7 @@ If you are actively targeted by the state, you will need to look at more secure 
 - Installing a fresh copy of MacOS with more secure options, such as network safeguards and drive encryption.
 - Introduction to accessing the Internet using Containers in Firefox browser to keep different profiles in different silos.
 - Using a free secure email service such as [ProtonMail](https://protonmail.com/).
-- Setting up a VPN, such as [NordVPN](https://nordvpn.com/).
+- Setting up a VPN, such as [NordVPN](https://nordvpn.com/) or the more expensive [ProtonVPN](https://protonvpn.com/) which gives you a bundle deal with ProtonMail.
 - Using Tor Browser to browse the Internet anonymously.
 
 
