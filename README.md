@@ -1,4 +1,4 @@
-# Handfoot Security Guide
+# Security Guide
 
 *Last Update: August 2020*
 
