@@ -171,13 +171,15 @@ I recommend setting up a free [ProtonMail](https://protonmail.com/) account, tha
 
 In addition to storing all of your emails in encrypted form deep inside a mountain in Switzerland, ProtonMail also makes it really easy and convenient to secure all email communications, even to non-ProtonMail users and to users without any knowledge of how public-private key encryption schemes (like PGP) work.
 
+### Use the Encryption feature
+
 ![Encryption](/img/use_protonmail_encryption.cleaned.png)
 
-### Use the Encryption feature
+**Important**&nbsp; Email sent out from protonmail to non-protonmail email address are **not** encrypted, and sent in plain text. This is simply the nature of how the email protocol works. Please use the **Encryption** feature to encrypt all sensitive emails you do not want to be read when intercepted. Do not type anything sensitive in the Subject, even if you use encryption.
 
 After you setup an account, try composing an email to another (private) account. The email composer has an “Encryption” icon you can click on, where you will be prompted to type in a password to secure this email. The recipient of your email can simply click on the message, and be prompted for the password to decrypt it. The password can be communicated via secure means, such as Signal, but make sure each email has a different password. The recipient can also securely reply to your email if it is sent this way.
 
-**Important**&nbsp; Never put sensitive information in the subject of the email as that can be intercepted and may not be subject to encryption.
+**Important**&nbsp; Even if you use the encryption feature, **never** put sensitive information in the subject of the email as that can be intercepted and may not be subject to encryption.
 
 While the most secure way to email is using local email clients with strong encryption keys, services like ProtonMail can be a really easy way to securely communicate information between journalists, activists, political figures, without having to invest much time and energy on setting up a local encryption email system yourself.
 
