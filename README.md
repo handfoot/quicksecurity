@@ -181,7 +181,7 @@ In addition to storing all of your emails in encrypted form deep inside a mounta
 
 After you setup an account, try composing an email to another (private) account. The email composer has an “Encryption” icon you can click on, where you will be prompted to type in a password to secure this email. The recipient of your email can simply click on the message, and be prompted for the password to decrypt it. The password can be communicated via secure means, such as Signal, but make sure each email has a different password. The recipient can also securely reply to your email if it is sent this way.
 
-**Important**&nbsp; Even if you use the encryption feature, **never** put sensitive information in the subject of the email as that can be intercepted and may not be subject to encryption.
+**Important**&nbsp; Even if you use the encryption feature, **never** put sensitive information in the Subject of the email.
 
 While the most secure way to email is using local email clients with strong encryption keys, services like ProtonMail can be a really easy way to securely communicate information between journalists, activists, political figures, without having to invest much time and energy on setting up a local encryption email system yourself.
 
