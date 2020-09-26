@@ -171,7 +171,11 @@ I recommend setting up a free [ProtonMail](https://protonmail.com/) account, tha
 
 In addition to storing all of your emails in encrypted form deep inside a mountain in Switzerland, ProtonMail also makes it really easy and convenient to secure all email communications, even to non-ProtonMail users and to users without any knowledge of how public-private key encryption schemes (like PGP) work.
 
-For example, after you setup an account, try composing an email to another (private) account. The email composer has an “Encryption” icon you can click on, where you will be prompted to type in a password to secure this email. The recipient of your email can simply click on the message, and be prompted for the password to decrypt it. The password can be communicated via secure means, such as Signal, but make sure each email has a different password. The recipient can also securely reply to your email if it is sent this way.
+![Encryption](/img/use_protonmail_encryption.cleaned.png)
+
+### Use the Encryption feature
+
+After you setup an account, try composing an email to another (private) account. The email composer has an “Encryption” icon you can click on, where you will be prompted to type in a password to secure this email. The recipient of your email can simply click on the message, and be prompted for the password to decrypt it. The password can be communicated via secure means, such as Signal, but make sure each email has a different password. The recipient can also securely reply to your email if it is sent this way.
 
 **Important**&nbsp; Never put sensitive information in the subject of the email as that can be intercepted and may not be subject to encryption.
 
